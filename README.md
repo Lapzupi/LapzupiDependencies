@@ -1,4 +1,4 @@
-# com.lapzupi.dev.dependencies.LapzupiDependencies
+# LapzupiDependencies
  All base required dependencies for the Lapzupi project.
 
 * ACF (Command Framework)
