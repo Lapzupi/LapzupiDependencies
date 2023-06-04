@@ -38,12 +38,6 @@ bukkit {
     website = "https://github.com/Lapzupi/LapzupiDependencies"
 
     apiVersion = "1.19"
-
-    libraries = listOf(
-        libs.configurate.hocon.get().toString(),
-        libs.configurate.gson.get().toString(),
-        libs.configurate.yaml.get().toString()
-    )
 }
 
 tasks {
@@ -56,7 +50,6 @@ tasks {
 
         dependencies {
             exclude(dependency("net.kyori:.*:.*"))
-            exclude(dependency("org.spongepowered.configurate:.*:.*"))
         }
         archiveFileName.set("LapzupiDependencies-${project.version}.jar")
         archiveClassifier.set("shadow")
