@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.lapzupi.dev"
-version = "1.0.0"
+version = "1.0.1"
 
 description = "Dependencies for the Lapzupi Project."
 
@@ -24,6 +24,9 @@ dependencies {
     api(libs.acf.commands)
     api(libs.nbt.api)
     api(libs.triumph.gui)
+    api(libs.lapzupi.config)
+    api(libs.lapzupi.connection)
+    api(libs.lapzupi.files)
 }
 
 bukkit {

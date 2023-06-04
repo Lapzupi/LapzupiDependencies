@@ -7,3 +7,6 @@
 * ACF (Command Framework)
 * NBT-API 
 * Triumph GUI
+* LapzupiConfig
+* LapzupiConnection
+* LapzupiFiles
