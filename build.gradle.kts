@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.lapzupi.dev"
-version = "1.0.1"
+version = "1.0.3"
 
 description = "Dependencies for the Lapzupi Project."
 
@@ -24,6 +24,7 @@ dependencies {
     api(libs.acf.commands)
     api(libs.nbt.api)
     api(libs.triumph.gui)
+
     api(libs.lapzupi.config)
     api(libs.lapzupi.connection)
     api(libs.lapzupi.files)
@@ -37,6 +38,12 @@ bukkit {
     website = "https://github.com/Lapzupi/LapzupiDependencies"
 
     apiVersion = "1.19"
+
+    libraries = listOf(
+        libs.configurate.hocon.get().toString(),
+        libs.configurate.gson.get().toString(),
+        libs.configurate.yaml.get().toString()
+    )
 }
 
 tasks {
@@ -49,6 +56,7 @@ tasks {
 
         dependencies {
             exclude(dependency("net.kyori:.*:.*"))
+            exclude(dependency("org.spongepowered.configurate:.*:.*"))
         }
         archiveFileName.set("LapzupiDependencies-${project.version}.jar")
         archiveClassifier.set("shadow")
@@ -56,7 +64,7 @@ tasks {
         relocate("de.tr7zw", "com.lapzupi.dev.dependencies.nbt")
         relocate("co.aikar.commands", "com.lapzupi.dev.dependencies.acf")
         relocate("co.aikar.locales", "com.lapzupi.dev.dependencies.locales")
-        relocate("com.github.Lapzupi", "com.lapzupi.dev.dependencies.gui")
+        relocate("dev.triumphteam.gui", "com.lapzupi.dev.dependencies.gui")
     }
 }
 

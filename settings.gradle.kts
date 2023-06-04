@@ -9,7 +9,12 @@ dependencyResolutionManagement {
             library("triumph-gui", "com.github.Lapzupi:triumph-gui:3.1.5")
             library("lapzupi-connection","com.github.Lapzupi:LapzupiConnection:1.0.2")
             library("lapzupi-config","com.github.Lapzupi:LapzupiConfig:1.1.1")
-            library("lapzupi-files", "com.github.Lapzupi:LapzupiFiles:1c7a837b53")
+            library("lapzupi-files", "com.github.Lapzupi:LapzupiFiles:1.0.2")
+
+            version("configurate", "4.1.2")
+            library("configurate-hocon", "org.spongepowered","configurate-hocon").versionRef("configurate")
+            library("configurate-gson", "org.spongepowered","configurate-gson").versionRef("configurate")
+            library("configurate-yaml", "org.spongepowered","configurate-yaml").versionRef("configurate")
         }
     }
 }
