@@ -2,7 +2,7 @@ plugins {
     id("java-library")
     id("maven-publish")
     id("com.github.johnrengelman.shadow") version "8.1.0"
-    id("net.minecrell.plugin-yml.bukkit") version "0.5.3"
+    id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
 }
 
 group = "com.lapzupi.dev"
@@ -37,7 +37,7 @@ bukkit {
     version = project.version.toString()
     website = "https://github.com/Lapzupi/LapzupiDependencies"
 
-    apiVersion = "1.19"
+    apiVersion = "1.20"
 }
 
 tasks {
@@ -64,7 +64,7 @@ tasks {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
